@@ -22,7 +22,7 @@ alias to='pushd'
 alias l='ls -CF'
 alias ls='ls -lFb'
 alias la='ls -lFbAp'
-alias lc='ls -lFbc'
+alias lc='ls -FbC'
 
 
 # Set the terminal to use color
