@@ -87,3 +87,12 @@ if [[ "$(id -u)" != "0" ]]; then
       PS1="${txtylw}\w ${txtrst}$ "
    fi
 fi
+
+
+# Completion
+if [ -f /opt/local/etc/bash_completion ]; then
+  . /opt/local/etc/bash_completion
+elif [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
