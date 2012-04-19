@@ -51,6 +51,12 @@ PATH=$HOME/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin
 
 
+# Add MacPorts path
+if [[ $platform == 'darwin' && "$(type -P /opt/local/bin/port)" ]]; then
+   PATH=/opt/local/bin:/opt/local/sbin:$PATH
+fi
+
+
 # Set up aliases
 alias psg='ps -ax | grep $1'
 alias ot='popd'
