@@ -8,7 +8,11 @@ fi
 
 
 # Add the ~ bin
-export PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:$PATH
+
+
+# Add .rvm bin
+PATH=$PATH:$HOME/.rvm/bin
 
 
 # Set up aliases
