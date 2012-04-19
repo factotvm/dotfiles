@@ -16,7 +16,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 
 # Set up aliases
-alias psx='ps -auxw | grep $1'
+alias psg='ps -ax | grep $1'
 alias ot='popd'
 alias to='pushd'
 alias l='ls -CF'
