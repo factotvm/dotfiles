@@ -79,12 +79,13 @@ elif [[ $platform == 'linux' ]]; then
    alias lc='ls -lFbc --color-auto'
 fi
 
+
 # Set the prompt
 if [[ "$(id -u)" != "0" ]]; then
    if [[ "$(type -P vcprompt)" ]]; then
-      PS1="${txtylw}\w "'$(vcprompt)'"${txtrst}$ "
+      PS1="\[$txtylw\]\w "'$(vcprompt)'"\[$txtrst\]$ \]"
    else
-      PS1="${txtylw}\w ${txtrst}$ "
+      PS1="\[$txtylw\]\w \[$txtrst\]$ \]"
    fi
 fi
 
