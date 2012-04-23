@@ -90,6 +90,22 @@ if [[ "$(id -u)" != "0" ]]; then
 fi
 
 
+# Find the root of our dotfiles
+target="${BASH_SOURCE[0]}"
+while [ -h "$target" ]; do
+   target="$(readlink "$target")";
+done
+root=$( cd -P "$( dirname "$target" )" && cd .. && pwd )
+
+
+# Source all files in ./source
+if [[ -d $root/source ]]; then
+   for file in $root/source/*; do
+      source "$file"
+   done
+fi
+
+
 # Completion
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
