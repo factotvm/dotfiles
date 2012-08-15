@@ -90,12 +90,19 @@ if [[ "$(id -u)" != "0" ]]; then
 fi
 
 
-# Find the root of our dotfiles
-target="${BASH_SOURCE[0]}"
-while [ -h "$target" ]; do
-   target="$(readlink "$target")";
-done
-root=$( cd -P "$( dirname "$target" )" && cd .. && pwd )
+# Set the root of our dotfiles to the parent directory
+# see http://stackoverflow.com/a/179231
+pushd . > /dev/null
+target="${BASH_SOURCE[0]}";
+if ([ -h "${target}" ]) then
+  while [ -h "${target}" ]; do
+    cd $(dirname "$target");
+    target=$(readlink "${target}");
+  done
+fi
+cd $(dirname ${target})  && cd .. > /dev/null
+root=$(pwd);
+popd  > /dev/null
 
 
 # Source all files in ./source
