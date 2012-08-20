@@ -120,3 +120,5 @@ elif [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
+# Increase Maven's heap size
+export MAVEN_OPTS=-Xmx512m
