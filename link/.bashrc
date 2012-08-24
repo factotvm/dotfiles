@@ -33,6 +33,9 @@ bakpur='\e[45m'   # Purple
 bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 
+# Make Bash case-insensitive
+bind "set completion-ignore-case on"
+
 
 # Set patform depending on OS
 platform='unknown'
