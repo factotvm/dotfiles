@@ -50,13 +50,16 @@ fi
 PATH=$HOME/bin:$PATH
 
 
-# Add .rvm bin
-PATH=$PATH:$HOME/.rvm/bin
+# Add /usr/local/bin
+PATH=/usr/local/bin:$PATH
 
 
-# Add MacPorts path
-if [[ $platform == 'darwin' && "$(type -P /opt/local/bin/port)" ]]; then
-   PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Set up Homebrew (http://mxcl.github.com/homebrew/)
+if [[ $platform == 'darwin' && "$(type -P brew)" ]]; then
+    # Add bash completion
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+	. `brew --prefix`/etc/bash_completion
+    fi
 fi
 
 
@@ -115,13 +118,6 @@ if [[ -d $root/source ]]; then
    done
 fi
 
-
-# Completion
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-elif [ -f /etc/bash_completion ]; then
-  . /etc/bash_completion
-fi
 
 # Increase Maven's heap size
 export MAVEN_OPTS=-Xmx512m
