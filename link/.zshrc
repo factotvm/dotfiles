@@ -20,3 +20,6 @@ fi
 
 # Set JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+
+# Initialize rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
