@@ -13,6 +13,9 @@ elif [[ $OSTYPE =~ linux* ]]; then
    platform='linux'
 fi
 
+# Add the ~ bin
+export PATH=$HOME/bin:$PATH
+
 # Add Homebrew path
 if [[ $platform == 'darwin' ]] && (( $+commands[brew] )) ; then
    export PATH=/usr/local/bin:$PATH
