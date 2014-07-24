@@ -1,3 +1,10 @@
+# Set up zsh completion
+autoload -U compini
+compini
+
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+
 # Set patform depending on OS
 platform='unknown'
 if [[ $OSTYPE =~ darwin* ]]; then
