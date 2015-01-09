@@ -1,5 +1,5 @@
 # Set up zsh completion
-autoload -U compini
+autoload -Uz compinit
 compinit
 
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
