@@ -13,6 +13,16 @@ alias to='pushd'
 autoload -U promptinit
 promptinit
 
+# Use Vi mode
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+export KEYTIMEOUT=1
 
 # Set patform depending on OS
 platform='unknown'
