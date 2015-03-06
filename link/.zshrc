@@ -9,6 +9,10 @@ alias ls='ls -l'
 alias ot='popd'
 alias to='pushd'
 
+# Load prompt
+autoload -U promptinit
+promptinit
+
 
 # Set patform depending on OS
 platform='unknown'
