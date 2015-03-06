@@ -6,6 +6,9 @@ zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 alias ls='ls -l'
+alias ot='popd'
+alias to='pushd'
+
 
 # Set patform depending on OS
 platform='unknown'
