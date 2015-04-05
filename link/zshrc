@@ -43,5 +43,12 @@ fi
 # Set JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 
+# Initialize nvm
+if [[ $platform == 'darwin' ]] ; then
+    export NVM_DIR=~/.nvm
+    source $(brew --prefix nvm)/nvm.sh
+fi
+
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
