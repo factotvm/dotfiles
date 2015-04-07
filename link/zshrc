@@ -5,13 +5,12 @@ compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
+# Load prompt
+source ~/.zsh/config/prompt.zsh
+
 alias ls='ls -l'
 alias ot='popd'
 alias to='pushd'
-
-# Load prompt
-autoload -U promptinit
-promptinit
 
 # Use Vi mode
 bindkey -v
