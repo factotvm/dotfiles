@@ -16,8 +16,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-aheadbehind git-re
 # zstyle ':vcs_info:*+*:*' debug true
 
 setopt prompt_subst
-PROMPT='%~'$'\n''${vcs_info_msg_0_}%# '
-RPROMPT='%D{%b %d %H:%S}'
+PROMPT='%~ ${vcs_info_msg_0_// /}%# '
+#RPROMPT='%D{%b %d %H:%S}'
 
 ### git: Show marker (T) if there are untracked files in repository
 # Make sure you have added staged to your 'formats':  %c
