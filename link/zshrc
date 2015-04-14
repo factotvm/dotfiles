@@ -43,7 +43,7 @@ fi
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 
 # Initialize nvm
-if [[ $platform == 'darwin' ]] && (( $+commands[nvm] )) ; then
+if [[ $platform == 'darwin' ]] ; then
     export NVM_DIR=~/.nvm
     source $(brew --prefix nvm)/nvm.sh
 fi
