@@ -139,7 +139,7 @@ dir_list_style=MIXED_STYLE
 #   ^N = down    ^P = up
 #   ^B = left    ^F = right
 # will be enabled.
-emacs_keys=off
+emacs_keys=on
 
 # file_editor specifies the editor to be invoked when editing local files
 # or sending mail.  If no editor is specified, then file editing is disabled
@@ -336,7 +336,7 @@ verbose_images=on
 # will be enabled.  These keys are only lower case.
 # Capital 'H', 'J' and 'K will still activate help, jump shortcuts,
 # and the keymap display, respectively.
-vi_keys=off
+vi_keys=on
 
 # The visited_links setting controls how Lynx organizes the information
 # in the Visited Links Page.
