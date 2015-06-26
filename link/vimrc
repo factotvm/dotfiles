@@ -1,5 +1,7 @@
-"Always show current position
+" Always show current position
 set ruler
+
+" Turn on sytax highlighting by default
 
 " No annoying sound on errors
 set noerrorbells
