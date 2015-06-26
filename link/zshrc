@@ -51,3 +51,12 @@ fi
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Configure Lynx
+if [ -e "$HOME/.lynx.lss" ] ; then
+    export LYNX_LSS="$HOME/.lynx.lss"
+fi
+
+if [ -e "$HOME/.lynx.cfg" ] ; then
+    export LYNX_CFG="$HOME/.lynx.cfg"
+fi
+
