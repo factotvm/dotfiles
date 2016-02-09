@@ -15,6 +15,10 @@
       (expand-file-name "emacs-customizations.el" user-emacs-directory))
 (load custom-file)
 
+;; Load up functions (Can this be joined with 'custom' system?)
+(setq function-file
+      (expand-file-name "emacs-functions.el" user-emacs-directory))
+(load function-file)
 
 ;; Set up Mac OS X specific hacks
 (if (string-equal "darwin" (symbol-name system-type))
