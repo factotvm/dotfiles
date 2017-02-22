@@ -30,6 +30,7 @@ values."
      ;; markdown
      org
      osx
+     dt-org-journal
      (shell :variables
              shell-default-shell 'term
              shell-default-height 30
