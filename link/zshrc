@@ -15,8 +15,11 @@ alias ls='ls -l'
 alias ot='popd'
 alias to='pushd'
 
+# Use Emacs mode
+bindkey -e
+
 # Use Vi mode
-bindkey -v
+# bindkey -v
 
 bindkey '^P' up-history
 bindkey '^N' down-history
