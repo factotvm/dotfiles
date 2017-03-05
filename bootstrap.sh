@@ -7,7 +7,7 @@ cd $(dirname $0)
 script_path=$(pwd)
 
 # Link items
-find "$script_path/link" -maxdepth 1 | while read item; do
+find "$script_path/link" ! -name link -prune -maxdepth 1 | while read item; do
   echo "Linking: $item"
   ln -sf $item ~/.$(basename $item)
 done
