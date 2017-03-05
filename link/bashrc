@@ -127,9 +127,3 @@ fi
 # Increase Maven's heap size
 export MAVEN_OPTS=-Xmx512m
 
-# Add Flash Player to the path
-if [[ $platform == 'darwin' ]]; then
-   FLASH_PLAYER='/Applications/Flash Player Debugger.app/Contents/MacOS'
-   export PATH=$FLASH_PLAYER:$PATH
-fi
-
